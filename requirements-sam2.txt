@@ -1,0 +1,8 @@
+numpy
+opencv-python
+torch
+torchvision
+tqdm
+hydra-core
+iopath
+git+https://github.com/facebookresearch/sam2.git
