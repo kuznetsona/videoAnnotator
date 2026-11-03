@@ -4,9 +4,19 @@
 
 ## Установка зависимостей
 
+В WSL из папки проекта создай Conda-окружение и установи PyTorch для CUDA 12.9.
+
 ```bash
-pip install -r requirements-sam2.txt
+conda create -n video-annotator-cu129 python=3.12 pip tk -y
+conda activate video-annotator-cu129
+python -m pip install torch==2.8.0+cu129 torchvision==0.23.0+cu129 \
+  --index-url https://download.pytorch.org/whl/cu129
+python -m pip install -r requirements-sam2.txt \
+  -c <(printf '%s\n' 'torch==2.8.0+cu129' 'torchvision==0.23.0+cu129')
+python -m pip check
 ```
+
+Параметр `-c` фиксирует CUDA-сборки при установке остальных зависимостей.
 
 ## Запуск
 
