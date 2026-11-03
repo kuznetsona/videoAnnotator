@@ -16,6 +16,14 @@ pip install -r requirements-sam2.txt
 python sam2_video_annotator.py --device cuda
 ```
 
+## Управление разметкой
+
+1. Нажми **Open video**. Перейди к нужному кадру ползунком или кнопками **Previous frame** и **Next frame**.
+2. Выбери **Active object ID**. Щёлкни левой кнопкой по объекту, правой — по фону. Чтобы уточнить разметку, добавь точки на других кадрах с тем же ID. Для другого объекта выбери новый ID.
+3. Нажми **Run annotation**. Результаты можно открыть кнопкой **Open output folder**. Ползунок **Mask opacity** меняет прозрачность маски в окне.
+
+**Undo active-object prompt** отменяет последнюю точку выбранного объекта. **Clear active-object prompts** удаляет все его точки, а **Clear all prompts** очищает точки всех объектов.
+
 ## Флаги
 
 | Флаг | По умолчанию | Назначение |
