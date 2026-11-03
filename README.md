@@ -2,6 +2,19 @@
 
 Полуавтоматическая разметка видео в графическом интерфейсе.
 
+## Скачивание
+
+В Ubuntu WSL установи Git LFS и скачай проект вместе с весами модели.
+
+```bash
+sudo apt update
+sudo apt install -y git git-lfs
+git lfs install
+git clone https://github.com/kuznetsona/videoAnnotator.git
+cd videoAnnotator
+git lfs pull
+```
+
 ## Установка зависимостей
 
 В WSL из папки проекта создай Conda-окружение и установи PyTorch для CUDA 12.9.
